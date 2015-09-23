@@ -1,0 +1,15 @@
+package com.j2.observer;
+
+public class CurrentConditionsDisplay implements Observer{
+ private float temperature;
+ private float humidity;
+ private Subject weatehrData;
+ public CurrentConditionsDisplay(Subject weatherData){
+   this.weatherData=weatherData;
+   weatehrData.registerObserver(this);
+ }
+public void update(float temperature, float humidity,float pressure){
+    this.temperature=temperature;
+    this.humidity=humidity;
+    display();
+}
