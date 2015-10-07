@@ -1,0 +1,11 @@
+package com.j2.decorator;
+
+class Espresso() extends Beverage{
+  pubilc Espresso(){
+    description="Espresso coffee";
+  }
+  
+  public double cost(){
+    return .10;
+  }
+}

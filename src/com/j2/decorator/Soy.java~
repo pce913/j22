@@ -1,0 +1,16 @@
+package com.j2.decorator;
+
+public class Soy extends ComdimentDecorator{
+  Beverage beverage;
+  
+  public Soy(Beverage beverage){
+    this.beverage=beverage;
+  }
+  public String getDescription(){
+    return beverage.getDiscription()+" Soy";
+  }
+  
+  public double cost)(){
+    return ,15+beverage.cost();
+  }
+}
