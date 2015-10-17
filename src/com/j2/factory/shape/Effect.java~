@@ -1,0 +1,11 @@
+package com.j2.factory.shape;
+
+public abstract class Effect{
+  shape shapes;
+  
+  public shape whatShape(String type){
+    shapes=createShape(tyle);
+  }
+  
+  public abstract createShape(String type);
+} 
