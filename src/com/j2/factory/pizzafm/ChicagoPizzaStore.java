@@ -1,0 +1,13 @@
+package com.j2.factory.pizzafm;
+
+public class ChicagoPizzaStore extends PizzaStore{
+  public Pizza createPizza(String type){
+    if(type.equals("cheese")==true)
+      pizza=new ChicagoStyleCheesePizza();
+    else if(type.equals("potato")==true)
+      pizza=new ChicagoStylePotatoPizza();
+    
+    return pizza;
+  }
+  
+}

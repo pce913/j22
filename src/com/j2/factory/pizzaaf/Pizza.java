@@ -1,7 +1,11 @@
 package com.j2.factory.pizzaaf;
 
 public abstract class Pizza{
-  String name;
+  String name=null;
+  Cheese cheese=null;
+  Dough dough=null;
+  Potato potato=null;
+  PizzaIngredientFactory ingredientFactory;
   abstract void prepare();
   
   void bake(){
@@ -18,8 +22,12 @@ public abstract class Pizza{
     return name;
   }
   
+  public void setName(String name){
+    this.name=name;
+  }
+  
   public String toString(){
-    System.out.println("----"+name+"----");
+    System.out.println("----"+name+"----"+dough.kind()+"----"+cheese.kind()+"----"+potato.kind());
     return name;
   }
 }

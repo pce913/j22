@@ -1,0 +1,13 @@
+package com.j2.factory.pizzaaf;
+
+public class PotatoPizza extends Pizza{
+  public CheesePizza(PizzaIngredientFactory ingredientFactory){
+    this.ingredientFactory=ingredientFactory;
+  }
+  
+  void prepare(){
+    Sysstem.out.println("preparing "+ name);
+    dough=ingredientFactory.createDough();
+    potato=ngredientFactory.createCheese();
+  }
+}

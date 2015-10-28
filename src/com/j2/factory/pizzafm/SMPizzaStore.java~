@@ -1,0 +1,12 @@
+package com.j2.factory.pizzafm;
+
+public class SMPizzaStore{
+  public Pizza createPizza(String type){
+    if(type.equals("cheese")==true)
+      pizza=new SMStyleCheesePizza();
+    else if(type.equals("potato")==true)
+      pizza=new SMStylePotatoPizza();
+    
+    return pizza;
+  }
+}

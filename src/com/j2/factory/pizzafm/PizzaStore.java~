@@ -1,0 +1,8 @@
+package com.j2.factory.pizzafm;
+
+public class abstract PizzaStore{
+  Pizza
+  public orderPizza(String type){
+   
+  }
+}

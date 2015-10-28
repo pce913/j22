@@ -1,0 +1,7 @@
+package com.j2.factory.shape;
+
+public class ThreeDRetangle(){
+  public ThreeDRectangle(){
+    name="ThreeDRectangle";
+  }
+}
