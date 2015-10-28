@@ -1,0 +1,18 @@
+package com.j2.singleton.chocolate;
+public class Singleton{
+ 
+  private static int numCalled;
+  
+  private static ChocolateBoiler uniqueInstance;
+  private Singleton(){}
+  public static ChocolateBoiler getInstance(){
+    if(uniqueInstance==null){
+      System.out.println("Creating a new instance...");
+      uniqueInstance=new ChocolateBoiler();
+    }
+    System.out.println("numCalled: " + numCalled++);
+    return uniqueInstance;
+  }
+
+  
+}
