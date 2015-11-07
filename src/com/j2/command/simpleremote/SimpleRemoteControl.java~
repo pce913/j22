@@ -1,0 +1,14 @@
+package com.j2.command.simpleremote;
+
+public class SimpleRemoteControl{
+  Command slot
+  
+  public SimpleRemoteControl(){}
+  public void setCommand(Command command){
+    slot=commmand;
+  }
+  
+  public void buttonWasPressed(){
+    slot.execute();
+  }
+}
