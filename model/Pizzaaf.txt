@@ -1,0 +1,43 @@
+@startuml
+class PizzaStore
+class NYPizzaStore
+class ChicagoPizzaStore
+PizzaStore <|-- NYPizzaStore
+PizzaStore <|-- ChicagoPizzaStore
+Pizza <-- PizzaStore
+PizzaIngredientFactory <-- PizzaStore
+
+class Pizza
+class CheesePizza
+class PotatoPizza
+Pizza <|-- CheesePizza
+Pizza <|-- PotatoPizza
+Dough <-- Pizza
+Cheese <-- Pizza
+Potato <--Pizza
+
+class PizzaIngredientFactory
+class NYPizzaIngredientFactory
+class ChicagoPizzaIngredientFactory
+PizzaIngredientFactory <|-- NYPizzaIngredientFactory
+PizzaIngredientFactory <|-- ChicagoPizzaIngredientFactory
+
+interface Cheese
+class ChedaCheese
+class ReggianoCheese
+Cheese <|.. ChedaCheese
+Cheese <|.. ReggianoCheese
+
+interface Dough
+class ThickDough
+class ThinDough
+Dough <|.. ThickDough
+Dough <|.. ThinDough
+
+interface Potato
+class SlicedPotato
+class MashedPotato
+Potato <|-- SlicedPotato
+Potato <|-- MashedPotato
+
+@enduml

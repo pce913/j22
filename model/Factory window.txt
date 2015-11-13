@@ -1,0 +1,33 @@
+interface Window{
+ + draw():void
+ + getDescription():String
+}
+
+class SimpleWindow{
+ + draw():void
++ getDescription():String
+}
+
+abstract class WindowDecorator{
+ #decoratedWindow:Window
+ + WindowDecorator(Window decoratedWindow)
+}
+
+class VerticalScrollBarDecorator{
+ +VerticalScrollBarDecorator(Window decoratedWindow)
+ +draw():void
+ -drawVerticalScrollBar():void
+ +getDescription():String
+}
+
+class HorizontalScrollBarDecorator{
+ +HorizontalScrollBarDecorator(Window decoratorWindow)
+ + draw():void
+ -drawHorizontalScrollBar():void
+ +getDescription():String
+}
+ Window <|.. SimpleWindow
+Window <|.. WindowDecorator
+WindowDecorator <|-- VerticalScrollBarDecorator
+WindowDecorator <|--HorizontalScrollBarDecorator
+Window <--* WindowDecorator

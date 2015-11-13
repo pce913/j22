@@ -1,0 +1,7 @@
+Client -> Beverage:new()
+Client -> DarkRoast:beverage2=new()
+Client -> Mocha:beverage2=new(beverage2)
+Client -> Mocha:beverage2=new(beverage2)
+Client -> Whip:beverage2=new(beverage2)
+Client -> Beverage:getDescription()
+Client -> Beverage:getCost()

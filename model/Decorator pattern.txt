@@ -1,0 +1,29 @@
+abstract class Beverage{
+ -description="Unknown beverage":String
+ +getDescription()
+ +abstract double cost()
+}
+
+class DarkRoast{
+ +DarkRoast()
+ +cost():double
+}
+
+class HouseBlend{
+ +HouseBlend()
+ +cost():double
+}
+
+class Mocha{
+ -beverage:Beverage
+ +Mocha()
+}
+
+abstract class ComdimentDecorator{
+ +abstract getDescription():String
+}
+Beverage <|-- DarkRoast
+Beverage <|-- HouseBlend
+Beverage <|-- ComdimentDecorator
+ComdimentDecorator <|-- Mocha
+Mocha *--> Beverage 

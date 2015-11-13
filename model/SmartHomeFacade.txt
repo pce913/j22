@@ -1,0 +1,32 @@
+class SmartHomeFacade{
+  light:Light
+  computer:Computer
+  touchPad:TuochPad
+  smartPan:SmartPan
+}
+class Computer{
+  description:String
+  touchPad:TouchPad
+}
+class TouchPad{
+  description:String
+  smartPan:SmartPan
+  
+}
+
+class SmartPan{
+  description:String
+  touchPad:TouchPad
+}
+
+class Light{
+  description:String
+}
+
+SmartHomeFacade --> Computer
+SmartHomeFacade --> Light
+SmartHomeFacade --> TouchPad
+SmartHomeFacade --> SmartPan
+Computer --> TouchPad
+TouchPad -left-> SmartPan
+SmartPan --> TouchPad

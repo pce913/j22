@@ -1,0 +1,29 @@
+class SimplePizzaFactory
+
+class Pizza{
+ prepare()
+ bake()
+ cut()
+ box()
+}
+
+class CheesePizza{
+}
+class Veggiepizza
+class ClamPizza
+class PepperoniPizza
+
+class PizzaStore{
+ +orderPizza()
+}
+class SimplePizzaStore{
+ +createPizza()
+}
+
+Pizza <|-- CheesePizza
+Pizza <|-- Veggiepizza
+Pizza <|-- ClamPizza
+Pizza <|-- PepperoniPizza
+
+SimplePizzaFactory -> Pizza
+PizzaStore -right-> SimplePizzaFactory
