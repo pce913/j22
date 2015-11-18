@@ -1,0 +1,23 @@
+@startuml
+interface ISubject{
+ +registerObserver(Observer):void
+ +removeObserver(Observer):void
+ +notifyObserver():void
+}
+abstract class IObserver{
+ #subject:Subject
+ +abstract update():void
+}
+
+class ForecastDisplay
+class StatisticDisplay
+class CurrentConditionDisplay
+
+ISubject <|.. WeatherData
+ISubject <-left- IObserver
+
+IObserver <|-- ForecastDisplay
+IObserver <|-- StatisticDisplay
+IObserver <|-- CurrentConditionDisplay
+IObserver <-- ISubject 
+@enduml

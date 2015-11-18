@@ -1,0 +1,32 @@
+@startuml
+class Duck{
+ -flyBehavior:FlyBehavior
+ -quackBehavior:QuackBehavior
+ +swim():void
+ +display():void
+ +performQuack():void
+ +performFly():void
+}
+
+interface QuackBehavior{
+ quack()
+}
+
+interface FlyBehavior{
+ fly()
+}
+
+class ModelDuck
+class MallardDuck
+class Quack
+class FlyRocketPowered
+class FlyWithWings
+
+Duck <|-- ModelDuck
+Duck <|-- MallardDuck
+QuackBehavior <|.. Quack
+FlyBehavior <|.. FlyWithWings
+FlyBehavior <|.. FlyRocketPowered
+QuackBehavior <-right- Duck
+FlyBehavior <-right- Duck
+@enduml
