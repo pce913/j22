@@ -1,0 +1,22 @@
+package com.j2.iterator.dinermerger.before;
+import java.util.*;
+
+public class PancakeHouseMenu{
+  static final int MAX_ITEMS=3;
+  int numberOfItems=0;
+  ArrayList menuItems;
+  menuItems=new ArrayList();
+  public PancakeHouseMenu(){
+    //menuItems=new MenuItem[MAX_ITEMS];
+    addItem("vegetarian BLT","delicious",true,3.22);
+  }
+  public void addItem(String n,String d,boolean v,double p){
+    MenuItem menuItem=new MenuItem(n,d,v,p);
+   menuItems.add(menuItem);
+  }
+ // public MenuItem[] getMenuItems()
+  
+   public ArrayList getMenuItems(){
+    return menuItems;
+  }
+}
