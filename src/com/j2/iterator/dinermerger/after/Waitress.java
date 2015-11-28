@@ -1,5 +1,5 @@
 package com.j2.iterator.dinermerger.after;
-import com.j2.iterator.dinermerger.before.MenuItem;
+//import com.j2.iterator.dinermerger.before.MenuItem;
 public class Waitress{
   PancakeHouseMenu pm;
   DinerMenu dm;

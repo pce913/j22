@@ -5,6 +5,7 @@ public class MenuTestDrive{
     PancakeHouseMenu pm=new PancakeHouseMenu();
     DinerMenu dm=new DinerMenu();
     Waitress w=new Waitress(pm,dm);
-    w.printMenu(pm);
+    w.printMenu(pm.createIterator());
+    w.printMenu(dm.createIterator());
   }
 }
