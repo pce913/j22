@@ -1,6 +1,0 @@
-package com.j2.iterator.dinermerger.before;
-
-public interface Iterator{
-  boolean hasNext();
-  Object next();
-}
