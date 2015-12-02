@@ -1,0 +1,14 @@
+package com.j2.state.gumballstate;
+
+public class HasQuarterState implements State{
+ // State state;
+  public void insertQuarter(){
+      System.out.println("You can not insert anotehr quarer");
+  }
+  public void ejectQuarter(){
+    System.out.println("Quarter returned");
+   // state = new NoQuarterState();
+  }
+  public void turnCrank();
+  public void dispense();
+}
