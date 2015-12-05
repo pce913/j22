@@ -2,11 +2,12 @@ package com.j2.state.gumballstate;
 
 public class HasQuarterState implements State{
   GumballMachine gm;
+
   public HasQuarterState(GumballMachine gm){
     this.gm=gm;
   }
   public void insertQuarter(){
-      System.out.println("You can not insert anotehr quarer");
+      System.out.println("You can not insert another quarter");
   }
   public void ejectQuarter(){
     System.out.println("Quarter returned");
@@ -21,5 +22,8 @@ public class HasQuarterState implements State{
   }
   public void dispense(){
     System.out.println("No gumball dispensed");
+  }
+  public String toString() {
+      return "waiting for turn of crank";
   }
 }

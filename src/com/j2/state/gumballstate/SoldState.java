@@ -30,4 +30,7 @@ public class SoldState implements State{
             }
     gm.setCount(count);
   }
+  public String toString() {
+		return "dispensing a gumball";
+	}
 }

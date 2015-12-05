@@ -2,6 +2,7 @@ package com.j2.state.gumballstate;
 
 public class NoQuarterState implements State{
   GumballMachine gm;
+
   public NoQuarterState(GumballMachine gm){
     this.gm=gm;
   }
@@ -11,8 +12,7 @@ public class NoQuarterState implements State{
   }
   
   public void ejectQuarter(){
-    System.out.println("You inserted a quarter");
-     gm.setState(gm.getHasQuarterState());
+    System.out.println("You haven't inserted a quarter");
   }
   
   public void turnCrank(){
@@ -21,4 +21,7 @@ public class NoQuarterState implements State{
   public void dispense(){
     System.out.println("Pay first");
   }
+  public String toString() {
+		return "waiting for quarter";
+	}
 }

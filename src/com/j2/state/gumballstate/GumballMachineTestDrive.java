@@ -6,15 +6,18 @@ public class GumballMachineTestDrive {
 
         System.out.println(gumballMachine);
 
-        gumballMachine.insertQuarter();
+        gumballMachine.insertQuarter(true);
         gumballMachine.turnCrank();
+        gumballMachine.releaseBall();
 
         System.out.println(gumballMachine);
-
-        gumballMachine.insertQuarter();
+        
+        gumballMachine.insertQuarter(false);
         gumballMachine.turnCrank();
-        gumballMachine.insertQuarter();
+        gumballMachine.insertQuarter(true);
         gumballMachine.turnCrank();
+        gumballMachine.releaseBall();
+        
 
         System.out.println(gumballMachine);
 }
